@@ -1,54 +1,99 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> World Boi Ghor - All Language Book Summary</title>
+<title>World Boi Ghor</title>
 <style>
-body{font-family:Arial;margin:0;background:#f5f5f5}
-.header{background:#0d2a54;color:white;padding:15px;text-align:center;position:sticky;top:0;z-index:100}
-#google_translate_element{margin:10px;background:white;padding:8px;border-radius:20px;display:inline-block}
-.card{background:white;margin:15px;padding:15px;border-radius:10px;box-shadow:0 2px 5px #0001}
-.card h2{color:#0d2a54}
-.btn{background:#ff5722;color:white;padding:8px 15px;border:none;border-radius:5px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#f2f4f8}
+.header{background:#0a2f5a;color:white;padding:28px 15px 30px;text-align:center}
+.header h1{font-size:34px;font-weight:800}
+.tag{opacity:.9;margin-top:6px}
+.lang-instruction{margin-top:18px;font-size:20px;font-weight:800;color:#fff;line-height:1.4}
+.controls{background:white;margin:-18px 15px 20px;padding:16px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.lang-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px}
+.lang-btn{border:1.5px solid #ddd;background:white;padding:9px 18px;border-radius:30px;white-space:nowrap;cursor:pointer;font-weight:700}
+.lang-btn.active{background:#ff5a1f;color:white;border-color:#ff5a1f}
+.search-box{width:100%;padding:15px 15px 15px 44px;border:1.5px solid #ddd;border-radius:14px;font-size:16px;outline:none;background:#f9fafb url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/></svg>') no-repeat 14px center}
+.book-card{background:white;margin:0 15px 16px;padding:22px;border-radius:18px;box-shadow:0 4px 15px rgba(0,0,0,.06)}
+.book-card h2{color:#0a2f5a;font-size:22px;margin-bottom:10px}
+.book-card p{color:#555;line-height:1.6;margin-bottom:16px}
+.read-btn{background:#ff5a1f;color:white;border:none;padding:12px 22px;border-radius:10px;font-weight:800;cursor:pointer}
+.share-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;border-top:1px solid #eee;padding-top:14px}
+.share-btn{border:none;padding:8px 14px;border-radius:25px;font-size:13px;font-weight:700;cursor:pointer}
+.fb{background:#1877F2;color:white}.wa{background:#25D366;color:white}.ms{background:#0084FF;color:white}.cp{background:#eee;color:#111}
+.site-share{display:flex;gap:8px;justify-content:center;margin-top:18px}
+#google_translate_element{display:none}.goog-te-banner-frame{display:none!important} body{top:0!important}
 </style>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'bn',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-
 <div class="header">
-  <h1>📚 World Boi Ghor </h1>
-  <p>একটি বই, পৃথিবীর সব ভাষায়</p>
-  <div id="google_translate_element"></div>
-  <p style="font-size:12px">↑ এখান থেকে আপনার ভাষা সিলেক্ট করুন / Select Your Language</p>
+<h1>📚 World Boi Ghor</h1>
+<div class="tag">একটি বই, পৃথিবীর সব ভাষায়</div>
+<div class="lang-instruction">Select Your Language /<br>এখান থেকে আপনার ভাষা সিলেক্ট করুন</div>
+<div id="google_translate_element"></div>
+<div class="site-share">
+<button class="share-btn fb" onclick="shareSite('fb')">Facebook</button>
+<button class="share-btn wa" onclick="shareSite('wa')">WhatsApp</button>
+<button class="share-btn cp" style="background:white;color:#0a2f5a" onclick="shareSite('copy')">🔗 Copy</button>
 </div>
-
-<div class="card">
-  <h2>পথের পাঁচালী - বিভূতিভূষণ</h2>
-  <p>অপু-দুর্গার গ্রামের গল্প। দারিদ্র্যের মাঝেও প্রকৃতির সৌন্দর্য আর স্বপ্ন দেখার গল্প। প্রতিটি বাঙালির পড়া উচিত।</p>
-  <button class="btn">সম্পূর্ণ পড়ুন</button>
 </div>
-
-<div class="card">
-  <h2>Alchemist - Paulo Coelho</h2>
-  <p>A shepherd boy travels to find treasure, but learns that the biggest treasure is the journey itself and listening to your heart.</p>
-  <button class="btn">Read More</button>
+<div class="controls">
+<div style="font-weight:700;margin-bottom:10px">🌐 Language:</div>
+<div class="lang-row">
+<button class="lang-btn active" onclick="translateTo('en')">🇺🇸 English</button>
+<button class="lang-btn" onclick="translateTo('bn')">🇧🇩 বাংলা</button>
+<button class="lang-btn" onclick="translateTo('hi')">🇮🇳 हिंदी</button>
+<button class="lang-btn" onclick="translateTo('ar')">🇸🇦 عربي</button>
+<button class="lang-btn" onclick="translateTo('es')">🇪🇸 Español</button>
 </div>
-
-<div class="card">
-  <h2>Rich Dad Poor Dad</h2>
-  <p>টাকা কিভাবে আপনার জন্য কাজ করবে, আপনি টাকার জন্য নয়। ধনী হওয়ার মানসিকতা নিয়ে সেরা বই।</p>
-  <button class="btn">Read More</button>
+<input type="text" id="searchBox" class="search-box" placeholder="Search books, বই খুঁজুন..." onkeyup="searchBooks()">
 </div>
-
+<div id="bookList">
+<div class="book-card" data-title="pother pachali">
+<h2>পথের পাঁচালী - বিভূতিভূষণ</h2>
+<p>অপু-দুর্গার গ্রামের গল্প। দারিদ্র্যের মাঝেও প্রকৃতির সৌন্দর্য আর স্বপ্ন দেখার গল্প।</p>
+<button class="read-btn">সম্পূর্ণ পড়ুন</button>
+<div class="share-row">
+<button class="share-btn fb" onclick="shareBook('fb','Pother Pachali')">Facebook</button>
+<button class="share-btn wa" onclick="shareBook('wa','Pother Pachali')">WhatsApp</button>
+<button class="share-btn ms" onclick="shareBook('ms','Pother Pachali')">Messenger</button>
+<button class="share-btn cp" onclick="shareBook('copy','Pother Pachali')">Copy</button>
+</div>
+</div>
+<div class="book-card" data-title="alchemist">
+<h2>Alchemist - Paulo Coelho</h2>
+<p>A shepherd boy travels to find treasure, but learns that the biggest treasure is the journey itself.</p>
+<button class="read-btn">Read More</button>
+<div class="share-row">
+<button class="share-btn fb" onclick="shareBook('fb','Alchemist')">Facebook</button>
+<button class="share-btn wa" onclick="shareBook('wa','Alchemist')">WhatsApp</button>
+<button class="share-btn ms" onclick="shareBook('ms','Alchemist')">Messenger</button>
+<button class="share-btn cp" onclick="shareBook('copy','Alchemist')">Copy</button>
+</div>
+</div>
+<div class="book-card" data-title="rich dad">
+<h2>Rich Dad Poor Dad</h2>
+<p>টাকা কিভাবে আপনার জন্য কাজ করবে, আপনি টাকার জন্য নয়।</p>
+<button class="read-btn">Read More</button>
+<div class="share-row">
+<button class="share-btn fb" onclick="shareBook('fb','Rich Dad')">Facebook</button>
+<button class="share-btn wa" onclick="shareBook('wa','Rich Dad')">WhatsApp</button>
+<button class="share-btn ms" onclick="shareBook('ms','Rich Dad')">Messenger</button>
+<button class="share-btn cp" onclick="shareBook('copy','Rich Dad')">Copy</button>
+</div>
+</div>
+</div>
+<script>
+const SITE_URL="https://worldboighor.github.io/";
+function searchBooks(){let i=document.getElementById('searchBox').value.toLowerCase();let c=document.getElementsByClassName('book-card');for(let k=0;k<c.length;k++){let t=(c[k].getAttribute('data-title')+" "+c[k].innerText).toLowerCase();c[k].style.display=t.includes(i)?"":"none";}}
+function handleShare(t,tx,u){let f=tx+" "+u;if(t==='fb')window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(u)}`,'_blank');else if(t==='wa')window.open(`https://wa.me/?text=${encodeURIComponent(f)}`,'_blank');else if(t==='ms')window.open(`https://www.facebook.com/dialog/send?link=${encodeURIComponent(u)}&app_id=291494419107518&redirect_uri=${encodeURIComponent(u)}`,'_blank');else navigator.clipboard.writeText(f).then(()=>alert("✅ Link Copy Done!"));}
+function shareSite(t){handleShare(t,"📚 World Boi Ghor - একটি বই, পৃথিবীর সব ভাষায়! দেখো:",SITE_URL);}
+function shareBook(t,ti){handleShare(t,`📖 ${ti} - World Boi Ghor এ পড়লাম!`,SITE_URL);}
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,bn,hi,ar,es,fr',autoDisplay:false},'google_translate_element');}
+function translateTo(l){document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');let s=document.querySelector('.goog-te-combo');if(s){s.value=l;s.dispatchEvent(new Event('change'));}else{document.cookie=`googtrans=/en/${l}; path=/`;location.reload();}}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
-</html>
+  </html>
