@@ -2,99 +2,67 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
 <title>World Boi Ghor</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#f2f4f8}.header{background:#0a2f5a;color:white;padding:30px 15px 40px;text-align:center}
+body{background:#f2f4f8;top:0!important}
+.header{background:#0a2f5a;color:white;padding:30px 15px 40px;text-align:center}
 .step-box{background:white;margin:-25px 15px 20px;padding:20px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.15);text-align:center}
-.step-title{font-size:22px;font-weight:900;color:#0a2f5a}.step-sub{color:#666;font-size:14px;margin:6px 0 14px}
+.step-title{font-size:22px;font-weight:900;color:#0a2f5a}.step-sub{color:#555;font-size:14px;margin:6px 0 14px;font-weight:600}
 .lang-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.lang-btn{border:2px solid #e5e7eb;background:white;padding:10px 18px;border-radius:30px;cursor:pointer;font-weight:800}
 .lang-btn.active{background:#ff5a1f;color:white;border-color:#ff5a1f}
-.search-box{width:100%;padding:14px 14px 14px 42px;border:1.5px solid #ddd;border-radius:12px;outline:none;background:#f9fafb url('data:image/svg+xml;utf8,[STRIPPED]') no-repeat 14px center}
+.search-box{width:100%;padding:14px 14px 14px 42px;border:1.5px solid #ddd;border-radius:12px;outline:none;background:#f9fafb}
 .book-card{background:white;margin:12px 15px;padding:20px;border-radius:18px;text-align:left}
 .read-btn{background:#ff5a1f;color:white;border:none;padding:12px;width:100%;border-radius:10px;font-weight:800;cursor:pointer}
-#step2{display:none} #bookModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:999;overflow:auto}
-.modal-content{background:white;margin:15px;border-radius:16px;padding:20px;min-height:90vh;white-space:pre-wrap;line-height:1.8;font-size:16px}
-#google_translate_element{display:none!important}.goog-te-banner-frame{display:none!important}body{top:0!important}
+#step2{display:none}#bookModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9999;overflow:auto}
+.modal-content{background:white;margin:15px;border-radius:16px;padding:20px;min-height:90vh;white-space:pre-wrap;line-height:1.8}
+/* GOOGLE BAR HIDE */
+.goog-te-banner-frame,.VIpgJd-ZVi9od-l4eHX-hSRGPd,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}
+.goog-te-gadget,.skiptranslate{display:none!important}
+#google_translate_element{display:none!important}
+html,body{top:0!important}
 </style>
 </head>
 <body>
-<div class="header"><h1>📚 World Boi Ghor</h1><div>A book in all languages / একটি বই, পৃথিবীর সব ভাষায়</div><div id="google_translate_element"></div></div>
-
+<div class="header"><h1>📚 World Boi Ghor</h1><div>A book in all languages</div><div id="google_translate_element"></div></div>
 <div class="step-box" id="step1">
 <div class="step-title">Step 1: Select Your Language</div><div class="step-sub">First select your language / প্রথমে আপনার ভাষা সিলেক্ট করুন</div>
-<input type="text" id="langSearchBox" class="search-box" placeholder="Search language... ভাষা খুঁজুন" onkeyup="searchLanguage()">
+<input type="text" id="langSearchBox" class="search-box" placeholder="Search language... Japan" onkeyup="searchLanguage()">
 <div style="height:10px"></div>
 <div class="lang-row">
 <button class="lang-btn" data-name="english" onclick="selectLanguage('en',this)">🇺🇸 English</button>
-<button class="lang-btn" data-name="bangla" onclick="selectLanguage('bn',this)">🇧🇩 বাংলা</button>
+<button class="lang-btn" data-name="bangla" onclick="selectLanguage('bn',this)">🇧🇩 Bengali</button>
 <button class="lang-btn" data-name="japan" onclick="selectLanguage('ja',this)">🇯🇵 Japan</button>
 </div>
 </div>
-
 <div class="step-box" id="step2">
-<div class="step-title">Step 2: Now Search Books 📚</div><div class="step-sub">Now search books / এখন বই খুঁজুন</div>
-<input type="text" id="bookSearchBox" class="search-box" placeholder="Search books... বই খুঁজুন" onkeyup="searchBooks()">
+<div class="step-title">Step 2: Now Search Books</div>
+<input type="text" id="bookSearchBox" class="search-box" placeholder="Search books... Leonardo" onkeyup="searchBooks()">
 <div id="bookList" style="margin-top:15px">
-<div class="book-card" data-title="leonardo da vinci"><h2>লিওনার্দো দা ভিঞ্চি - ১ম অধ্যায়</h2><p>শৈশব, ১৪৫২ সাল। ইতালির ভিঞ্চি গ্রামে জন্ম নেওয়া এক জিনিয়াসের গল্প।</p><button class="read-btn" onclick="openBook('leonardo')">📖 Open Book / বই খুলুন - পড়ুন</button></div>
-<div class="book-card" data-title="pother pachali"><h2>পথের পাঁচালী</h2><p>অপু-দুর্গার গল্প</p><button class="read-btn" onclick="openBook('pother pachali')">📖 Open Book / বই খুলুন</button></div>
+<div class="book-card" data-title="leonardo"><h2>Leonardo da Vinci - Chapter 1</h2><p>Childhood, 1452 story</p><button class="read-btn" onclick="openBook('leonardo')">📖 Open Book</button></div>
+<div class="book-card" data-title="pother pachali"><h2>Pother Pachali</h2><p>Apu-Durga story</p><button class="read-btn" onclick="openBook('pother pachali')">📖 Open Book</button></div>
 </div>
 </div>
-
 <div id="bookModal"><div class="modal-content">
-<div style="display:flex;justify-content:space-between;position:sticky;top:0;background:white;padding:10px 0"><button onclick="closeBook()" style="background:#111;color:white;border:none;padding:8px 14px;border-radius:20px">✕ Close / বন্ধ করুন</button><input type="text" id="insideSearchBox" class="search-box" style="width:60%" placeholder="Search inside... ভেতরে খুঁজুন" onkeyup="searchInsideBook()"></div>
+<button onclick="closeBook()" style="background:#111;color:white;border:none;padding:8px 14px;border-radius:20px">✕ Close</button>
 <h2 id="modalTitle" style="color:#0a2f5a;margin:15px 0"></h2>
 <div id="modalBody"></div>
 </div></div>
-
 <script>
 const bookFullContents = {
-  "leonardo": `➤ ১ম অধ্যায়: শৈশব
-
-১৪৫২ সাল। ইতালির ভিঞ্চি গ্রামে এক উকিলের ঘরে একটা ছেলে জন্মালো, কিন্তু তার মা ছিলেন উকিলের বউ না। মা ছিলেন একজন সাধারণ মেয়ে, নাম ক্যাটেরিনা।
-
-তাই ছেলেটার নামের সাথে বংশের পদবী জুড়ে দেওয়া হয়নি। তাকে ডাকা হতো - ভিঞ্চি গ্রামের লিওনার্দো।
-
-তার সৌভাগ্য ছিলো তার দুর্ভাগ্যের মধ্যেই:
-
-১. সে জারজ ছিলো বলে তাকে বাবার মতো উকিল হতে হয়নি। সে স্বাধীন ছিলো।
-২. সে স্কুলে যায়নি। ল্যাটিন শেখেনি। তাই সে বই পড়ে জ্ঞান নেয়নি, প্রকৃতি থেকে নিয়েছে। সে নিজে লিখেছে - আমি এমন একজন মানুষ যার কোনো অক্ষর জ্ঞান নেই।
-৩. সে বাম হাতে লিখতো, উল্টো করে। আয়না দিয়ে পড়তে হতো। কারণ সে চাইতো না কেউ তার আইডিয়া চুরি করুক।
-
-☞ তার দুটো স্বপ্ন:
-আইজ্যাকসন বইতে লিওনার্দোর নিজের লেখা দুটো ঘটনা তুলে ধরেছেন, যা দিয়ে পুরো লিওনার্দোকে বোঝা যায়।
-
-ক) ছোটবেলায় সে স্বপ্ন দেখেছিল, একটা ঘুড়ি পাখি তার মুখের উপর এসে বসেছে। এর মানে সে ছোটবেলা থেকেই উড়তে চাইতো।
-
-খ) একদিন পাহাড়ে ঘুরতে গিয়ে সে একটা অন্ধকার গুহা দেখলো। সে খুব ভয় পেলো। আবার ভাবলো - ভিতরে কি আছে? এই ভয় আর কৌতূহল - দুটোই তাকে সারাজীবন তাড়িয়ে বেড়িয়েছে।
-
-✔ শেষ লাইন:
-এই গ্রামে, প্রকৃতির মাঝে ঘুরে ঘুরে সে শিখেছিল - সবকিছুকে প্রশ্ন করতে হয়। পানি কেন ঘোরে? পাখি কেন ওড়ে? মানুষ কেন হাসে? এই প্রশ্ন করাটাই তাকে পরে জিনিয়াস বানিয়েছে।`,
-
-  "pother pachali": `পথের পাঁচালী - বিভূতিভূষণ বন্দ্যোপাধ্যায়
-
-অপু-দুর্গার গল্প।`
+"leonardo": `➤ ১ম অধ্যায়: শৈশব\n\n১৪৫২ সাল। ইতালির ভিঞ্চি গ্রামে এক উকিলের ঘরে একটা ছেলে জন্মালো...\nতার সৌভাগ্য ছিলো তার দুর্ভাগ্যের মধ্যেই:\n১. সে স্বাধীন ছিলো।\n২. সে স্কুলে যায়নি।\n৩. সে বাম হাতে লিখতো।`,
+"pother pachali": `পথের পাঁচালী - অপু দুর্গার গল্প`
 };
-
-let originalText = "";
-function openBook(id){
- document.getElementById('modalTitle').innerText = id;
- originalText = bookFullContents[id] || "লেখা পাওয়া যায়নি।";
- document.getElementById('modalBody').innerText = originalText;
- document.getElementById('bookModal').style.display='block';
-}
+let originalText="";
+function openBook(id){document.getElementById('modalTitle').innerText=id;originalText=bookFullContents[id];document.getElementById('modalBody').innerText=originalText;document.getElementById('bookModal').style.display='block';}
 function closeBook(){document.getElementById('bookModal').style.display='none';}
-function searchInsideBook(){
- let q=document.getElementById('insideSearchBox').value;
- if(!q){document.getElementById('modalBody').innerText=originalText;return;}
- let reg=new RegExp(`(${q})`,'gi');
- document.getElementById('modalBody').innerHTML = originalText.replace(reg,'<mark>$1</mark>');
-}
 function searchLanguage(){let v=document.getElementById('langSearchBox').value.toLowerCase();document.querySelectorAll('.lang-btn').forEach(b=>{b.style.display=(b.getAttribute('data-name')+b.innerText).toLowerCase().includes(v)?"":"none";})}
 function searchBooks(){let v=document.getElementById('bookSearchBox').value.toLowerCase();document.querySelectorAll('.book-card').forEach(c=>{c.style.display=(c.getAttribute('data-title')+c.innerText).toLowerCase().includes(v)?"":"none";})}
-function selectLanguage(l,btn){document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');let s=document.querySelector('.goog-te-combo');if(s){s.value=l;s.dispatchEvent(new Event('change'));}else{document.cookie=`googtrans=/en/${l}; path=/`; } setTimeout(()=>{document.getElementById('step2').style.display='block';},300);}
-function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,bn,hi,ar,es,ja,ko,zh-CN',autoDisplay:false},'google_translate_element');}
+function selectLanguage(l,btn){document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');let s=document.querySelector('.goog-te-combo');if(s){s.value=l;s.dispatchEvent(new Event('change'));}else{document.cookie=`googtrans=/en/${l}; path=/`;} setTimeout(()=>{document.getElementById('step2').style.display='block';},300);}
+function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,bn,ja',autoDisplay:false},'google_translate_element');}
+setInterval(()=>{let b=document.querySelector('.goog-te-banner-frame');if(b)b.style.display='none';document.body.style.top='0px';},500);
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
-                                                                                                               </html>
+</html>
